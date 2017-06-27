@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>Python-晓可的图书网站</title>
+</head>
+<body>
+<a href="/addBook/">新增图书</a>
+<ul>
+    {%for book in books%}
+
+    <li>书名：{{book.btitle}}--<a href="/delBook{{book.id}}/">删除</a></li>
+
+    {%endfor%}
+</ul>
+<br/>
+<br/>
+
+<h2>所有英雄如下：</h2>
+<ul>
+    {% for hero in heros%}
+    <li>姓名：{{hero.hname}}--大招：{{ hero.hcontent}}</li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>
